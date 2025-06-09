@@ -1,0 +1,149 @@
+*** Settings ***
+Documentation    Test di Precisione con conteggio token GPT-2
+Library    RequestsLibrary
+Library    Collections
+Library    OperatingSystem
+Library    String
+Library    DateTime
+Library    json
+Library    Process
+Library    ../Etabula/Chat/GPT2TokenCounter.py    WITH NAME    TokenCounter
+Resource   ../Etabula/shared_variables.resource    # Importa il file di risorse condivise
+
+
+*** Variables ***
+${INSTALLATION_ENDPOINT}    /chat
+${QUERY}    Chi fa il giornalista in canada? leggi dalla knowlege base
+${OUTPUT_DIR}    ${CURDIR}/output
+${SIMILARITY_THRESHOLD}    0.65    # Soglia di similarità
+
+${FULL_PROCEDURE}
+...  ID,Nome,Ruolo,Nazione,Data di Nascita,Inizio Mandato,Note
+...  1,Chiara Moretti,Ricercatore,Germania,1950-03-01,2002-04-08,Ha lavorato in progetti internazionali
+...  2,Giulia Verdi,Architetto,Stati Uniti,1952-12-22,,Ha lavorato in progetti internazionali
+...  3,Giulia Verdi,Architetto,Germania,1983-01-09,,Docente universitario
+...  4,Francesca Neri,Manager,Spagna,1951-08-18,2007-11-29,Autore di diverse pubblicazioni
+...  5,Francesca Neri,Ingegnere,Canada,1969-02-16,,Autore di diverse pubblicazioni
+...  6,Chiara Moretti,Ingegnere,Canada,1961-04-23,,Partecipa a conferenze scientifiche
+...  7,Alessandro Bruno,Ingegnere,Australia,1978-09-07,,Esperto in intelligenza artificiale
+...  8,Alessandro Bruno,Ricercatore,Italia,1959-11-11,2014-06-23,Esperto in intelligenza artificiale
+...  9,Luca Bianchi,Giornalista,Canada,1987-12-14,,Premiato per l’innovazione
+...  10,Elisa Ferri,Architetto,Stati Uniti,1990-06-04,,Partecipa a conferenze scientifiche
+...  11,Giulia Verdi,Medico,Australia,1982-07-05,,Autore di diverse pubblicazioni
+...  12,Marco Rossi,Professore,Australia,1956-01-07,2016-11-04,Esperto in intelligenza artificiale
+...  13,Marco Rossi,Avvocato,Spagna,1992-07-19,,Esperto in intelligenza artificiale
+...  14,Giorgio Conti,Ingegnere,Canada,1990-09-28,,Autore di diverse pubblicazioni
+...  15,Elisa Ferri,Ingegnere,Canada,1992-03-06,,Autore di diverse pubblicazioni
+...  16,Chiara Moretti,Avvocato,Australia,1960-06-26,,Docente universitario
+...  17,Alessandro Bruno,Giornalista,Canada,1961-10-20,,Ha lavorato in progetti internazionali
+...  18,Chiara Moretti,Ricercatore,Australia,1986-01-10,2009-08-07,Esperto in intelligenza artificiale
+...  19,Francesca Neri,Giornalista,Italia,1972-11-22,,Autore di diverse pubblicazioni
+...  20,Luca Bianchi,Professore,Germania,1984-10-31,2006-03-11,Ha lavorato in progetti internazionali
+...  21,Chiara Moretti,Avvocato,Canada,1992-07-17,,Premiato per l’innovazione
+...  22,Giulia Verdi,Giornalista,Regno Unito,1968-03-05,,Premiato per l’innovazione
+...  23,Giulia Verdi,Medico,Germania,1990-11-13,,Premiato per l’innovazione
+...  24,Giorgio Conti,Ricercatore,Spagna,1960-02-27,2012-05-19,Autore di diverse pubblicazioni
+...  25,Giulia Verdi,Medico,Spagna,1972-11-05,,Esperto in intelligenza artificiale
+...  26,Giorgio Conti,Architetto,Australia,1979-01-22,,Autore di diverse pubblicazioni
+...  27,Alessandro Bruno,Professore,Canada,1956-03-13,2018-10-20,Autore di diverse pubblicazioni
+...  28,Chiara Moretti,Giornalista,Italia,1994-02-21,,Autore di diverse pubblicazioni
+...  29,Francesca Neri,Manager,Canada,1994-01-03,2011-08-19,Premiato per l’innovazione
+...  30,Giulia Verdi,Giornalista,Australia,1976-12-10,,Esperto in intelligenza artificiale
+...  31,Giulia Verdi,Manager,Germania,1980-09-09,2003-12-31,Premiato per l’innovazione
+...  32,Luca Bianchi,Giornalista,Stati Uniti,1962-05-05,,Esperto in intelligenza artificiale
+...  33,Giulia Verdi,Ingegnere,Regno Unito,1969-08-11,,Esperto in intelligenza artificiale
+...  34,Marco Rossi,Ricercatore,Stati Uniti,1954-09-24,2017-11-18,Docente universitario
+...  35,Alessandro Bruno,Architetto,Regno Unito,1973-08-14,,Docente universitario
+...  36,Giulia Verdi,Professore,Australia,1960-10-04,2014-02-02,Autore di diverse pubblicazioni
+...  37,Giorgio Conti,Ricercatore,Stati Uniti,1991-06-09,2013-05-04,Premiato per l’innovazione
+...  38,Marco Rossi,Medico,Australia,1960-12-01,,Ha lavorato in progetti internazionali
+...  39,Elisa Ferri,Avvocato,Canada,1977-07-08,,Ha lavorato in progetti internazionali
+...  40,Giulia Verdi,Architetto,Spagna,1960-08-16,,Ha lavorato in progetti internazionali
+...  41,Francesca Neri,Architetto,Regno Unito,1958-11-15,,Docente universitario
+...  42,Luca Bianchi,Manager,Germania,1980-06-02,2009-09-05,Autore di diverse pubblicazioni
+...  43,Elisa Ferri,Architetto,Italia,1973-04-30,,Esperto in intelligenza artificiale
+...  44,Marco Rossi,Avvocato,Spagna,1992-07-11,,Premiato per l’innovazione
+...  45,Luca Bianchi,Ingegnere,Regno Unito,1986-05-02,,Premiato per l’innovazione
+...  46,Francesca Neri,Manager,Australia,1951-03-15,2001-07-01,Esperto in intelligenza artificiale
+...  47,Alessandro Bruno,Medico,Regno Unito,1953-11-14,,Ha lavorato in progetti internazionali
+...  48,Giulia Verdi,Medico,Francia,1986-05-27,,Premiato per l’innovazione
+...  49,Marco Rossi,Architetto,Germania,1952-10-24,,Autore di diverse pubblicazioni
+...  50,Marco Rossi,Medico,Regno Unito,1969-07-22,,Partecipa a conferenze scientifiche
+...  51,Alessandro Bruno,Avvocato,Australia,1995-03-08,,Autore di diverse pubblicazioni
+...  52,Giulia Verdi,Ricercatore,Spagna,1950-07-08,2007-02-22,Esperto in intelligenza artificiale
+...  53,Francesca Neri,Avvocato,Spagna,1971-02-12,,Ha lavorato in progetti internazionali
+...  54,Giorgio Conti,Architetto,Regno Unito,1969-11-24,,Docente universitario
+...  55,Giorgio Conti,Giornalista,Australia,1953-10-02,,Esperto in intelligenza artificiale
+...  56,Giorgio Conti,Avvocato,Canada,1974-08-14,,Esperto in intelligenza artificiale
+...  57,Alessandro Bruno,Manager,Canada,1984-08-12,2018-04-19,Autore di diverse pubblicazioni
+...  58,Chiara Moretti,Professore,Stati Uniti,1983-11-06,2014-11-16,Premiato per l’innovazione
+...  59,Giulia Verdi,Ricercatore,Francia,1989-04-08,2003-05-05,Premiato per l’innovazione
+...  60,Francesca Neri,Manager,Stati Uniti,1952-11-10,2007-12-29,Partecipa a conferenze scientifiche
+...  61,Luca Bianchi,Architetto,Stati Uniti,1968-09-22,,Premiato per l’innovazione
+...  62,Chiara Moretti,Professore,Germania,1959-09-27,2002-05-22,Esperto in intelligenza artificiale
+...  63,Giulia Verdi,Ricercatore,Australia,1959-07-18,2010-10-18,Partecipa a conferenze scientifiche
+...  64,Francesca Neri,Manager,Germania,1987-05-04,2002-11-15,Premiato per l’innovazione
+...  65,Marco Rossi,Ingegnere,Regno Unito,1952-02-07,,Autore di diverse pubblicazioni
+...  66,Elisa Ferri,Manager,Germania,1969-10-09,2014-08-01,Autore di diverse pubblicazioni
+...  67,Elisa Ferri,Ricercatore,Canada,1978-11-29,2012-08-26,Partecipa a conferenze scientifiche
+...  68,Giorgio Conti,Ricercatore,Italia,1986-02-04,2005-01-02,Autore di diverse pubblicazioni
+...  69,Elisa Ferri,Ricercatore,Canada,1952-03-19,2001-12-28,Premiato per l’innovazione
+...  70,Luca Bianchi,Avvocato,Stati Uniti,1950-12-01,,Docente universitario
+...  71,Elisa Ferri,Ingegnere,Australia,1983-08-30,,Esperto in intelligenza artificiale
+...  72,Elisa Ferri,Professore,Australia,1995-09-07,2004-05-30,Premiato per l’innovazione
+...  73,Elisa Ferri,Architetto,Germania,1954-02-16,,Premiato per l’innovazione
+...  74,Alessandro Bruno,Giornalista,Spagna,1993-06-25,,Docente universitario
+...  75,Marco Rossi,Ingegnere,Italia,1980-01-16,,Premiato per l’innovazione
+...  76,Alessandro Bruno,Manager,Stati Uniti,1978-08-21,2016-01-26,Docente universitario
+...  77,Giorgio Conti,Giornalista,Canada,1971-02-15,,Partecipa a conferenze scientifiche
+...  78,Giulia Verdi,Avvocato,Regno Unito,1965-03-03,,Autore di diverse pubblicazioni
+...  79,Giorgio Conti,Architetto,Australia,1953-11-22,,Ha lavorato in progetti internazionali
+...  80,Francesca Neri,Professore,Germania,1974-11-02,2008-05-27,Premiato per l’innovazione
+...  81,Alessandro Bruno,Giornalista,Canada,1973-12-24,,Esperto in intelligenza artificiale
+...  82,Giulia Verdi,Ingegnere,Germania,1967-10-18,,Esperto in intelligenza artificiale
+...  83,Alessandro Bruno,Giornalista,Germania,1987-03-09,,Docente universitario
+...  84,Giorgio Conti,Giornalista,Italia,1975-12-10,,Partecipa a conferenze scientifiche
+...  85,Elisa Ferri,Medico,Australia,1991-07-05,,Docente universitario
+...  86,Francesca Neri,Professore,Canada,1953-10-22,2007-04-08,Autore di diverse pubblicazioni
+...  87,Alessandro Bruno,Professore,Francia,1992-01-11,2018-05-26,Partecipa a conferenze scientifiche
+...  88,Chiara Moretti,Professore,Australia,1962-10-08,2010-09-22,Docente universitario
+...  89,Luca Bianchi,Medico,Stati Uniti,1971-04-18,,Esperto in intelligenza artificiale
+...  90,Chiara Moretti,Professore,Francia,1955-04-01,2011-11-15,Partecipa a conferenze scientifiche
+...  91,Luca Bianchi,Ingegnere,Australia,1958-03-26,,Premiato per l’innovazione
+...  92,Chiara Moretti,Medico,Francia,1993-08-01,,Autore di diverse pubblicazioni
+...  93,Luca Bianchi,Medico,Stati Uniti,1988-03-10,,Premiato per l’innovazione
+...  94,Elisa Ferri,Professore,Australia,1989-04-29,2012-07-26,Esperto in intelligenza artificiale
+...  95,Chiara Moretti,Ricercatore,Italia,1973-03-27,2007-08-22,Autore di diverse pubblicazioni
+...  96,Elisa Ferri,Avvocato,Australia,1981-12-05,,Premiato per l’innovazione
+...  97,Elisa Ferri,Architetto,Regno Unito,1958-08-19,,Premiato per l’innovazione
+...  98,Giorgio Conti,Ricercatore,Francia,1995-09-17,2012-08-13,Ha lavorato in progetti internazionali
+...  99,Marco Rossi,Ricercatore,Spagna,1962-01-01,2013-09-23,Premiato per l’innovazione
+...  100,Elisa Ferri,Giornalista,Regno Unito,1983-09-13,,Premiato per l’innovazione
+
+@{INSTALLATION_SECTIONS_ANAGRAFICA}
+...    Persona1=Luca Bianchi 
+...    Persona2=Alessandro Bruno
+...    Persona3=Giorgio Conti
+
+
+
+*** Keywords ***
+Check Key Components
+    [Documentation]    Verifica la presenza di componenti chiave nella risposta
+    [Arguments]    ${text}
+    
+    ${text_lower}=    Convert To Lowercase    ${text}
+    
+# Verifica dei concetti fondamentali presenti nella prefazione
+
+    Should Match Regexp     ${text_lower}    .*luca bianchi.* 
+    ...    msg=Manca il riferimento a Luca Bianchi 
+
+    Should Match Regexp     ${text_lower}   .*alessandro bruno.*
+    ...    msg=Manca il riferimento a Alessandro Bruno
+
+    Should Match Regexp     ${text_lower}    .*giorgio conti.*
+    ...    msg=Manca il riferimento a Giorgio Conti
+Get ANAGRAFICA Installation Sections
+    RETURN    @{INSTALLATION_SECTIONS_ANAGRAFICA}
+
