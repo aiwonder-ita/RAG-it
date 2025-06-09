@@ -6,8 +6,8 @@ Library    Collections
 *** Variables ***
 ${BASE_URL}    http://localhost:9095
 ${UI_URL}         http://localhost:4200
-${USERNAME}    admin@example.com
-${PASSWORD}    admin123
+${USERNAME}    #INSERIRE USERNAME
+${PASSWORD}    #INSERIRE PASSWORD
 ${ACCESS_TOKEN}    ${EMPTY}    # Sarà impostata dal test di login
 ${DOCUMENT_ID}    ${EMPTY}    # Sarà impostata dal test di upload
 
