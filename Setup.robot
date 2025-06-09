@@ -3,7 +3,7 @@ Documentation    Test per API login - verifica status code ed estrazione token
 Library    RequestsLibrary
 Library    Collections
 Library    OperatingSystem
-Resource   ../shared_variables.resource    # Importa il file di risorse condivise
+Resource   shared_variables.resource    # Importa il file di risorse condivise
 
 *** Variables ***
 ${LOGIN_ENDPOINT}    /login
