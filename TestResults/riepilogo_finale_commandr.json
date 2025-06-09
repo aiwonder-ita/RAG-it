@@ -1,0 +1,575 @@
+{
+    "timestamp": "",
+    "total_files": 16,
+    "total_tests": 160,
+    "passed": 65,
+    "failed": 95,
+    "average_duration": 43.93846153846154,
+    "average_tokens": 237.4923076923077,
+    "average_similarity": 0.9427307692307692,
+    "file_details": [
+        {
+            "file": "chatMatrices.robot",
+            "total_runs": "10",
+            "passed": 0,
+            "failed": 10,
+            "average_duration": 0.0,
+            "average_tokens": 0.0,
+            "average_similarity": 0.0,
+            "results": []
+        },
+        {
+            "file": "chatPPTX.robot",
+            "total_runs": "10",
+            "passed": 5,
+            "failed": 5,
+            "average_duration": 39.0,
+            "average_tokens": 194.0,
+            "average_similarity": 0.7777777777777777,
+            "results": [
+                {
+                    "response_time": 34,
+                    "token_count": 144,
+                    "similarity": 0.7777777777777777,
+                    "timestamp": "20250428_172432"
+                },
+                {
+                    "response_time": 36,
+                    "token_count": 136,
+                    "similarity": 0.7777777777777777,
+                    "timestamp": "20250428_172539"
+                },
+                {
+                    "response_time": 41,
+                    "token_count": 271,
+                    "similarity": 0.6666666666666666,
+                    "timestamp": "20250428_172650"
+                },
+                {
+                    "response_time": 37,
+                    "token_count": 158,
+                    "similarity": 0.7777777777777777,
+                    "timestamp": "20250428_172732"
+                },
+                {
+                    "response_time": 47,
+                    "token_count": 261,
+                    "similarity": 0.8888888888888888,
+                    "timestamp": "20250428_172809"
+                }
+            ]
+        },
+        {
+            "file": "chatCuriosit\u00e0.robot",
+            "total_runs": "10",
+            "passed": 10,
+            "failed": 0,
+            "average_duration": 22.9,
+            "average_tokens": 46.0,
+            "average_similarity": 1.0,
+            "results": [
+                {
+                    "response_time": 24,
+                    "token_count": 44,
+                    "similarity": 1.0,
+                    "timestamp": "20250428_172934"
+                },
+                {
+                    "response_time": 23,
+                    "token_count": 51,
+                    "similarity": 1.0,
+                    "timestamp": "20250428_172958"
+                },
+                {
+                    "response_time": 23,
+                    "token_count": 48,
+                    "similarity": 1.0,
+                    "timestamp": "20250428_173021"
+                },
+                {
+                    "response_time": 20,
+                    "token_count": 9,
+                    "similarity": 1.0,
+                    "timestamp": "20250428_173045"
+                },
+                {
+                    "response_time": 24,
+                    "token_count": 80,
+                    "similarity": 1.0,
+                    "timestamp": "20250428_173105"
+                },
+                {
+                    "response_time": 24,
+                    "token_count": 45,
+                    "similarity": 1.0,
+                    "timestamp": "20250428_173129"
+                },
+                {
+                    "response_time": 21,
+                    "token_count": 9,
+                    "similarity": 1.0,
+                    "timestamp": "20250428_173153"
+                },
+                {
+                    "response_time": 23,
+                    "token_count": 43,
+                    "similarity": 1.0,
+                    "timestamp": "20250428_173214"
+                },
+                {
+                    "response_time": 21,
+                    "token_count": 57,
+                    "similarity": 1.0,
+                    "timestamp": "20250428_173238"
+                },
+                {
+                    "response_time": 26,
+                    "token_count": 74,
+                    "similarity": 1.0,
+                    "timestamp": "20250428_173259"
+                }
+            ]
+        },
+        {
+            "file": "chatBaseball.robot",
+            "total_runs": "10",
+            "passed": 10,
+            "failed": 0,
+            "average_duration": 39.6,
+            "average_tokens": 221.6,
+            "average_similarity": 0.9916666666666668,
+            "results": [
+                {
+                    "response_time": 38,
+                    "token_count": 254,
+                    "similarity": 1.0,
+                    "timestamp": "20250428_173326"
+                },
+                {
+                    "response_time": 37,
+                    "token_count": 132,
+                    "similarity": 1.0,
+                    "timestamp": "20250428_173405"
+                },
+                {
+                    "response_time": 38,
+                    "token_count": 271,
+                    "similarity": 1.0,
+                    "timestamp": "20250428_173443"
+                },
+                {
+                    "response_time": 30,
+                    "token_count": 149,
+                    "similarity": 1.0,
+                    "timestamp": "20250428_173521"
+                },
+                {
+                    "response_time": 35,
+                    "token_count": 252,
+                    "similarity": 0.9166666666666666,
+                    "timestamp": "20250428_173551"
+                },
+                {
+                    "response_time": 46,
+                    "token_count": 256,
+                    "similarity": 1.0,
+                    "timestamp": "20250428_173626"
+                },
+                {
+                    "response_time": 35,
+                    "token_count": 131,
+                    "similarity": 1.0,
+                    "timestamp": "20250428_173713"
+                },
+                {
+                    "response_time": 44,
+                    "token_count": 212,
+                    "similarity": 1.0,
+                    "timestamp": "20250428_173748"
+                },
+                {
+                    "response_time": 48,
+                    "token_count": 293,
+                    "similarity": 1.0,
+                    "timestamp": "20250428_173832"
+                },
+                {
+                    "response_time": 45,
+                    "token_count": 266,
+                    "similarity": 1.0,
+                    "timestamp": "20250428_173920"
+                }
+            ]
+        },
+        {
+            "file": "chatBook.robot",
+            "total_runs": "10",
+            "passed": 0,
+            "failed": 10,
+            "average_duration": 0.0,
+            "average_tokens": 0.0,
+            "average_similarity": 0.0,
+            "results": []
+        },
+        {
+            "file": "chatCatafratto.robot",
+            "total_runs": "10",
+            "passed": 10,
+            "failed": 0,
+            "average_duration": 40.8,
+            "average_tokens": 173.0,
+            "average_similarity": 1.0,
+            "results": [
+                {
+                    "response_time": 40,
+                    "token_count": 175,
+                    "similarity": 1.0,
+                    "timestamp": "20250428_174852"
+                },
+                {
+                    "response_time": 40,
+                    "token_count": 167,
+                    "similarity": 1.0,
+                    "timestamp": "20250428_174932"
+                },
+                {
+                    "response_time": 41,
+                    "token_count": 174,
+                    "similarity": 1.0,
+                    "timestamp": "20250428_175012"
+                },
+                {
+                    "response_time": 41,
+                    "token_count": 175,
+                    "similarity": 1.0,
+                    "timestamp": "20250428_175054"
+                },
+                {
+                    "response_time": 42,
+                    "token_count": 173,
+                    "similarity": 1.0,
+                    "timestamp": "20250428_175135"
+                },
+                {
+                    "response_time": 40,
+                    "token_count": 169,
+                    "similarity": 1.0,
+                    "timestamp": "20250428_175217"
+                },
+                {
+                    "response_time": 41,
+                    "token_count": 174,
+                    "similarity": 1.0,
+                    "timestamp": "20250428_175257"
+                },
+                {
+                    "response_time": 40,
+                    "token_count": 174,
+                    "similarity": 1.0,
+                    "timestamp": "20250428_175339"
+                },
+                {
+                    "response_time": 42,
+                    "token_count": 175,
+                    "similarity": 1.0,
+                    "timestamp": "20250428_175419"
+                },
+                {
+                    "response_time": 41,
+                    "token_count": 174,
+                    "similarity": 1.0,
+                    "timestamp": "20250428_175501"
+                }
+            ]
+        },
+        {
+            "file": "chatDanza.robot",
+            "total_runs": "10",
+            "passed": 2,
+            "failed": 8,
+            "average_duration": 37.0,
+            "average_tokens": 267.0,
+            "average_similarity": 1.0,
+            "results": [
+                {
+                    "response_time": 44,
+                    "token_count": 366,
+                    "similarity": 1.0,
+                    "timestamp": "20250428_175919"
+                },
+                {
+                    "response_time": 30,
+                    "token_count": 168,
+                    "similarity": 1.0,
+                    "timestamp": "20250428_180153"
+                }
+            ]
+        },
+        {
+            "file": "chatHTML.robot",
+            "total_runs": "10",
+            "passed": 4,
+            "failed": 6,
+            "average_duration": 41.0,
+            "average_tokens": 176.5,
+            "average_similarity": 1.0,
+            "results": [
+                {
+                    "response_time": 46,
+                    "token_count": 297,
+                    "similarity": 1.0,
+                    "timestamp": "20250428_180525"
+                },
+                {
+                    "response_time": 46,
+                    "token_count": 189,
+                    "similarity": 1.0,
+                    "timestamp": "20250428_180725"
+                },
+                {
+                    "response_time": 41,
+                    "token_count": 127,
+                    "similarity": 1.0,
+                    "timestamp": "20250428_180811"
+                },
+                {
+                    "response_time": 31,
+                    "token_count": 93,
+                    "similarity": 1.0,
+                    "timestamp": "20250428_181004"
+                }
+            ]
+        },
+        {
+            "file": "chatLLM.robot",
+            "total_runs": "10",
+            "passed": 1,
+            "failed": 9,
+            "average_duration": 38.0,
+            "average_tokens": 296.0,
+            "average_similarity": 0.6875,
+            "results": [
+                {
+                    "response_time": 38,
+                    "token_count": 296,
+                    "similarity": 0.6875,
+                    "timestamp": "20250428_181256"
+                }
+            ]
+        },
+        {
+            "file": "chatMail.robot",
+            "total_runs": "10",
+            "passed": 4,
+            "failed": 6,
+            "average_duration": 26.0,
+            "average_tokens": 96.75,
+            "average_similarity": 0.8888888888888888,
+            "results": [
+                {
+                    "response_time": 27,
+                    "token_count": 126,
+                    "similarity": 0.8888888888888888,
+                    "timestamp": "20250428_181856"
+                },
+                {
+                    "response_time": 25,
+                    "token_count": 77,
+                    "similarity": 0.8888888888888888,
+                    "timestamp": "20250428_181948"
+                },
+                {
+                    "response_time": 27,
+                    "token_count": 122,
+                    "similarity": 0.8888888888888888,
+                    "timestamp": "20250428_182130"
+                },
+                {
+                    "response_time": 25,
+                    "token_count": 62,
+                    "similarity": 0.8888888888888888,
+                    "timestamp": "20250428_182158"
+                }
+            ]
+        },
+        {
+            "file": "chatTecnologia.robot",
+            "total_runs": "10",
+            "passed": 4,
+            "failed": 6,
+            "average_duration": 61.0,
+            "average_tokens": 448.75,
+            "average_similarity": 0.9733333333333334,
+            "results": [
+                {
+                    "response_time": 63,
+                    "token_count": 460,
+                    "similarity": 0.9666666666666668,
+                    "timestamp": "20250428_182412"
+                },
+                {
+                    "response_time": 64,
+                    "token_count": 492,
+                    "similarity": 1.0,
+                    "timestamp": "20250428_182515"
+                },
+                {
+                    "response_time": 61,
+                    "token_count": 471,
+                    "similarity": 1.0,
+                    "timestamp": "20250428_182620"
+                },
+                {
+                    "response_time": 56,
+                    "token_count": 372,
+                    "similarity": 0.9266666666666667,
+                    "timestamp": "20250428_182919"
+                }
+            ]
+        },
+        {
+            "file": "chatTestiCasuali.robot",
+            "total_runs": "10",
+            "passed": 1,
+            "failed": 9,
+            "average_duration": 35.0,
+            "average_tokens": 145.0,
+            "average_similarity": 0.6666666666666666,
+            "results": [
+                {
+                    "response_time": 35,
+                    "token_count": 145,
+                    "similarity": 0.6666666666666666,
+                    "timestamp": "20250428_183509"
+                }
+            ]
+        },
+        {
+            "file": "chatEtabula.robot",
+            "total_runs": "10",
+            "passed": 5,
+            "failed": 5,
+            "average_duration": 102.4,
+            "average_tokens": 832.2,
+            "average_similarity": 0.8944444444444445,
+            "results": [
+                {
+                    "response_time": 98,
+                    "token_count": 811,
+                    "similarity": 0.9166666666666666,
+                    "timestamp": "20250428_184002"
+                },
+                {
+                    "response_time": 93,
+                    "token_count": 787,
+                    "similarity": 0.8888888888888888,
+                    "timestamp": "20250428_184426"
+                },
+                {
+                    "response_time": 106,
+                    "token_count": 855,
+                    "similarity": 0.8888888888888888,
+                    "timestamp": "20250428_184602"
+                },
+                {
+                    "response_time": 66,
+                    "token_count": 440,
+                    "similarity": 0.861111111111111,
+                    "timestamp": "20250428_184912"
+                },
+                {
+                    "response_time": 149,
+                    "token_count": 1268,
+                    "similarity": 0.9166666666666666,
+                    "timestamp": "20250428_185152"
+                }
+            ]
+        },
+        {
+            "file": "chatPrivacy.robot",
+            "total_runs": "10",
+            "passed": 3,
+            "failed": 7,
+            "average_duration": 85.66666666666667,
+            "average_tokens": 625.0,
+            "average_similarity": 0.7322222222222221,
+            "results": [
+                {
+                    "response_time": 83,
+                    "token_count": 542,
+                    "similarity": 0.7533333333333333,
+                    "timestamp": "20250428_185732"
+                },
+                {
+                    "response_time": 74,
+                    "token_count": 534,
+                    "similarity": 0.6766666666666666,
+                    "timestamp": "20250428_185950"
+                },
+                {
+                    "response_time": 100,
+                    "token_count": 799,
+                    "similarity": 0.7666666666666666,
+                    "timestamp": "20250428_190105"
+                }
+            ]
+        },
+        {
+            "file": "chatPrezzi.robot",
+            "total_runs": "10",
+            "passed": 6,
+            "failed": 4,
+            "average_duration": 33.333333333333336,
+            "average_tokens": 27.0,
+            "average_similarity": 1.0,
+            "results": [
+                {
+                    "response_time": 39,
+                    "token_count": 13,
+                    "similarity": 1.0,
+                    "timestamp": "20250428_190526"
+                },
+                {
+                    "response_time": 28,
+                    "token_count": 41,
+                    "similarity": 1.0,
+                    "timestamp": "20250428_190658"
+                },
+                {
+                    "response_time": 32,
+                    "token_count": 13,
+                    "similarity": 1.0,
+                    "timestamp": "20250428_190750"
+                },
+                {
+                    "response_time": 46,
+                    "token_count": 23,
+                    "similarity": 1.0,
+                    "timestamp": "20250428_190822"
+                },
+                {
+                    "response_time": 28,
+                    "token_count": 25,
+                    "similarity": 1.0,
+                    "timestamp": "20250428_190908"
+                },
+                {
+                    "response_time": 27,
+                    "token_count": 47,
+                    "similarity": 1.0,
+                    "timestamp": "20250428_191026"
+                }
+            ]
+        },
+        {
+            "file": "chatAnagrafica.robot",
+            "total_runs": "10",
+            "passed": 0,
+            "failed": 10,
+            "average_duration": 0.0,
+            "average_tokens": 0.0,
+            "average_similarity": 0.0,
+            "results": []
+        }
+    ]
+}
