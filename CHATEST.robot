@@ -5,23 +5,23 @@ Library    OperatingSystem
 Library    String
 Library    DateTime
 Library    json
-Resource    ${CURDIR}/chatMatrices.robot
-Resource    ${CURDIR}/chatPPTX.robot
-Resource    ${CURDIR}/chatCuriosità.robot
-Resource    ${CURDIR}/chatBaseball.robot
-Resource    ${CURDIR}/chatBook.robot
-Resource    ${CURDIR}/chatCatafratto.robot
-Resource    ${CURDIR}/chatDanza.robot
-Resource    ${CURDIR}/chatHTML.robot
-Resource    ${CURDIR}/chatLLM.robot
-Resource    ${CURDIR}/chatMail.robot
-Resource    ${CURDIR}/chatTecnologia.robot
-Resource    ${CURDIR}/chatTestiCasuali.robot
-Resource    ${CURDIR}/chatEtabula.robot
-Resource    ${CURDIR}/chatPrivacy.robot
-Resource    ${CURDIR}/chatPrezzi.robot
-Resource    ${CURDIR}/chatAnagrafica.robot
-Resource    ../Etabula/shared_variables.resource
+Resource    Documenti/chatMatrices.robot
+Resource    Documenti/chatPPTX.robot
+Resource    Documenti/chatCuriosità.robot
+Resource    Documenti/chatBaseball.robot
+Resource    Documenti/chatBook.robot
+Resource    Documenti/chatCatafratto.robot
+Resource    Documenti/chatDanza.robot
+Resource    Documenti/chatHTML.robot
+Resource    Documenti/chatLLM.robot
+Resource    Documenti/chatMail.robot
+Resource    Documenti/chatTecnologia.robot
+Resource    Documenti/chatTestiCasuali.robot
+Resource    Documenti/chatEtabula.robot
+Resource    Documenti/chatPrivacy.robot
+Resource    Documenti/chatPrezzi.robot
+Resource    Documenti/chatAnagrafica.robot
+Resource    shared_variables.resource
 
 Suite Setup    Load Token From File
 *** Variables ***
