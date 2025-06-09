@@ -1,0 +1,209 @@
+{
+    "timestamp": "20250508_171126",
+    "formula": {
+        "success_rate_weight": 40,
+        "similarity_weight": 30,
+        "speed_weight": 20,
+        "token_weight": 10
+    },
+    "results": [
+        {
+            "file": "riepilogo_finale_cogito.json",
+            "score": 66.13878518471027,
+            "passed": 85,
+            "failed": 75,
+            "avg_duration": 48.84705882352941,
+            "avg_tokens": 214.35294117647058,
+            "avg_similarity": 0.9113333333333334
+        },
+        {
+            "file": "riepilogo_finale_qwen25:32B.json",
+            "score": 65.60393288672192,
+            "passed": 85,
+            "failed": 75,
+            "avg_duration": 48.22352941176471,
+            "avg_tokens": 307.2352941176471,
+            "avg_similarity": 0.9125261437908496
+        },
+        {
+            "file": "riepilogo_finale_qwne25:14B.json",
+            "score": 63.48644614968326,
+            "passed": 72,
+            "failed": 88,
+            "avg_duration": 35.888888888888886,
+            "avg_tokens": 253.44444444444446,
+            "avg_similarity": 0.9309336419753086
+        },
+        {
+            "file": "riepilogo_finale_gemma3.json",
+            "score": 62.755070016200015,
+            "passed": 72,
+            "failed": 88,
+            "avg_duration": 35.81944444444444,
+            "avg_tokens": 291.43055555555554,
+            "avg_similarity": 0.9185030864197531
+        },
+        {
+            "file": "riepilogo_finale_commandr.json",
+            "score": 62.26261561271393,
+            "passed": 65,
+            "failed": 95,
+            "avg_duration": 43.93846153846154,
+            "avg_tokens": 237.4923076923077,
+            "avg_similarity": 0.9427307692307692
+        },
+        {
+            "file": "riepilogo_finale_ayaexpanse.json",
+            "score": 62.072761030711575,
+            "passed": 66,
+            "failed": 94,
+            "avg_duration": 55.166666666666664,
+            "avg_tokens": 299.8484848484849,
+            "avg_similarity": 0.9425378787878788
+        },
+        {
+            "file": "riepilogo_finale_granite3.3.json",
+            "score": 59.96375360089781,
+            "passed": 63,
+            "failed": 97,
+            "avg_duration": 119.73015873015873,
+            "avg_tokens": 305.8095238095238,
+            "avg_similarity": 0.9118209876543208
+        },
+        {
+            "file": "riepilogo_finale_deepseekr1.json",
+            "score": 59.86921714381168,
+            "passed": 58,
+            "failed": 102,
+            "avg_duration": 84.77586206896552,
+            "avg_tokens": 433.32758620689657,
+            "avg_similarity": 0.9568965517241379
+        },
+        {
+            "file": "riepilogo_finale_openthinker.json",
+            "score": 59.50908905834148,
+            "passed": 63,
+            "failed": 97,
+            "avg_duration": 81.4920634920635,
+            "avg_tokens": 389.92063492063494,
+            "avg_similarity": 0.9110802469135802
+        },
+        {
+            "file": "riepilogo_finale_qwen3.json",
+            "score": 58.73474891312335,
+            "passed": 53,
+            "failed": 107,
+            "avg_duration": 117.58490566037736,
+            "avg_tokens": 402.52830188679246,
+            "avg_similarity": 0.9567610062893084
+        },
+        {
+            "file": "riepilogo_finale_mistralsmall.json",
+            "score": 58.19077750362298,
+            "passed": 54,
+            "failed": 106,
+            "avg_duration": 52.81481481481482,
+            "avg_tokens": 270.68518518518516,
+            "avg_similarity": 0.9158796296296295
+        },
+        {
+            "file": "riepilogo_finale_commandr:7b.json",
+            "score": 58.13204366121164,
+            "passed": 51,
+            "failed": 109,
+            "avg_duration": 50.88235294117647,
+            "avg_tokens": 289.7647058823529,
+            "avg_similarity": 0.9358986928104577
+        },
+        {
+            "file": "riepilogo_finale_gemma2.json",
+            "score": 57.81432885412881,
+            "passed": 49,
+            "failed": 111,
+            "avg_duration": 44.38775510204081,
+            "avg_tokens": 279.0,
+            "avg_similarity": 0.9381349206349208
+        },
+        {
+            "file": "riepilogo_finale_noshermes2.json",
+            "score": 57.64636675380685,
+            "passed": 43,
+            "failed": 117,
+            "avg_duration": 135.67441860465115,
+            "avg_tokens": 260.3488372093023,
+            "avg_similarity": 0.9722222222222222
+        },
+        {
+            "file": "riepilogo_finale_phi4.json",
+            "score": 55.617046919513164,
+            "passed": 44,
+            "failed": 116,
+            "avg_duration": 48.18181818181818,
+            "avg_tokens": 356.6136363636364,
+            "avg_similarity": 0.9260606060606061
+        },
+        {
+            "file": "riepilogo_finale_phi3.json",
+            "score": 54.40062614946188,
+            "passed": 36,
+            "failed": 124,
+            "avg_duration": 42.97222222222222,
+            "avg_tokens": 358.19444444444446,
+            "avg_similarity": 0.9452623456790124
+        },
+        {
+            "file": "riepilogo_finale_marcoo1.json",
+            "score": 54.22145385391956,
+            "passed": 47,
+            "failed": 113,
+            "avg_duration": 82.40425531914893,
+            "avg_tokens": 746.3404255319149,
+            "avg_similarity": 0.9156323877068557
+        },
+        {
+            "file": "riepilogo_finale_mixtral.json",
+            "score": 52.24758079427574,
+            "passed": 25,
+            "failed": 135,
+            "avg_duration": 40.2,
+            "avg_tokens": 213.04,
+            "avg_similarity": 0.9377777777777778
+        },
+        {
+            "file": "riepilogo_finale_yi.json",
+            "score": 51.86573819768684,
+            "passed": 24,
+            "failed": 136,
+            "avg_duration": 57.666666666666664,
+            "avg_tokens": 241.25,
+            "avg_similarity": 0.9409722222222222
+        },
+        {
+            "file": "riepilogo_finale_phi4reasoning.json",
+            "score": 50.468940232318424,
+            "passed": 30,
+            "failed": 130,
+            "avg_duration": 151.03333333333333,
+            "avg_tokens": 1156.8,
+            "avg_similarity": 0.9566666666666667
+        },
+        {
+            "file": "riepilogo_finale_mistralnemo.json",
+            "score": 47.07813587057289,
+            "passed": 5,
+            "failed": 155,
+            "avg_duration": 24.4,
+            "avg_tokens": 234.4,
+            "avg_similarity": 0.9333333333333333
+        },
+        {
+            "file": "riepilogo_finale_phi4-mini-reasoning.json",
+            "score": 43.89816491971401,
+            "passed": 14,
+            "failed": 146,
+            "avg_duration": 161.14285714285714,
+            "avg_tokens": 1024.4285714285713,
+            "avg_similarity": 0.884920634920635
+        }
+    ]
+}
