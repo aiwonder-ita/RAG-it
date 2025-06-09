@@ -7,8 +7,8 @@ Library    String
 Library    DateTime
 Library    json
 Library    Process
-Library    ../Etabula/Chat/GPT2TokenCounter.py    WITH NAME    TokenCounter
-Resource   ../Etabula/shared_variables.resource    # Importa il file di risorse condivise
+Library    ../GPT2TokenCounter.py    WITH NAME    TokenCounter
+Resource   ../shared_variables.resource    # Importa il file di risorse condivise
 
 
 *** Variables ***
