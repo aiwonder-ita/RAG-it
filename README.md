@@ -60,9 +60,10 @@ L’output standard di Robot (`output.xml`, `report.html`, `log.html`) si trover
 
 ## Aggiungere nuovi casi di test
 
-1. Crea un nuovo `chatX.robot` in `RisposteCorrette/` seguendo la struttura degli altri file (sezione `*** Variables ***` con `QUERY`, `SIMILARITY_THRESHOLD`, risposta “gold” e variabili di output).
-2. Importa eventualmente keyword aggiuntive nel blocco `*** Keywords ***`.
-3. Aggiorna la lista `@{TEST_FILES}` in `CHATEST.robot` se vuoi eseguire il file in batch.
+1. Crea un nuovo `chatX.robot` in `RisposteCorrette/` seguendo la struttura degli altri file (sezione `*** Variables ***` con `QUERY`, `SIMILARITY_THRESHOLD`, risposta “gold” in `FULL_PROCEDURE` e `INSTALLATION_SECTIONS_MATRICES`).
+2. Importa eventualmente keyword aggiuntive nel blocco `*** Keywords ***` e aggiungi un `Check Key Components` adeguato.
+3. Aggiorna la lista `TEST_FILES` in `CHATEST.robot` se vuoi eseguire il file in batch.
+4. Aggiungi il nuovo `file_path` a `Single Precision Execution` e in `Analyze Document By Sections`.
 
 
 ## Licenza
