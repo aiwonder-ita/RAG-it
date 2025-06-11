@@ -17,7 +17,7 @@
 |----------|-------------|
 | `Documenti/` | (facoltativo) Documenti di conoscenza usati dal motore RAG – da caricare separatamente. |
 | `RisposteCorrette/` | Suite di _acceptance test_ tematiche (`chatMatrices.robot`, `chatBook.robot`, ecc.) con prompt, risposta attesa e keyword di validazione.<!-- :contentReference[oaicite:6]{index=6} --> |
-| `RisultatoFinale/` | Classificatore dei json risultanti e report che indca il punteggio per i modelli già testati.|
+| `RisultatoFinale/` | Contiene l'algoritmo di classificazione utilizzato per dare un punteggio ai modelli e il report che indica il punteggio per i modelli già testati.|
 | `Tabella.pdf` | Tabella riepilogativa del punteggio assegnato a modelli già testati.|
 | `shared_variables.resource` | Variabili condivise: `BASE_URL`, credenziali, token e document-id.<!-- :contentReference[oaicite:7]{index=7} --> |
 | `Setup.robot` | Effettua il login, valida HTTP 200 e salva l’`access_token` in `token.txt`.<!-- :contentReference[oaicite:8]{index=8} --> |
